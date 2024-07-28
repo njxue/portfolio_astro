@@ -1,0 +1,14 @@
+---
+import WE from "../../data/WorkExperiences";
+import Experience from "./Experience.astro";
+---
+
+<div id="id-workExperiences">
+  <div class="p-2 mb-5 text-4xl text-center font-mono">
+    <h1>Work Experience</h1>
+  </div>
+  <hr />
+  <div class="mt-5 flex flex-col gap-10">
+    {WE?.map((exp) => <Experience experience={exp} />)}
+  </div>
+</div>

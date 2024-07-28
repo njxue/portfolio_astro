@@ -1,0 +1,13 @@
+---
+import MySocials from "../../data/MySocials";
+---
+
+<div class="flex flex-row gap-5">
+  {
+    Object.values(MySocials)?.map((social) => (
+      <a href={social?.link} target="_blank" rel="noreferrer">
+        <img width="30" src={`/icons/${social?.icon}`} />
+      </a>
+    ))
+  }
+</div>

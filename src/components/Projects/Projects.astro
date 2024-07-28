@@ -1,0 +1,14 @@
+---
+import P from "../../data/Projects";
+import Project from "./Project.astro";
+---
+
+<div id="id-projects">
+  <div class="p-2 mb-5 text-4xl text-center font-mono">
+    <h1>Projects</h1>
+  </div>
+  <hr />
+  <div class="mt-5 flex flex-col gap-10">
+    {P?.map((proj) => <Project project={proj} />)}
+  </div>
+</div>

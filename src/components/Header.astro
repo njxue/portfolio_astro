@@ -1,0 +1,24 @@
+---
+import Button from "./Button.astro";
+
+const buttons = [
+  { text: "Work Experience", id: "id-workExperiences" },
+  { text: "Projects", id: "id-projects" },
+  { text: "Coursework", id: "id-courseWork" },
+];
+---
+
+<header
+  class="flex flex-row justify-between p-5 border-b-2 border-teal-900 z-50 h-[70px] w-full top-0 fixed bg-white dark:bg-[#121212] dark:text-white dark:border-white"
+>
+  <div class="flex items-center gap-5">
+    <h1 class="text-xl">Jing Xue</h1>
+  </div>
+  <div class="flex items-center gap-4">
+    {
+      buttons?.map((button) => (
+        <Button text={button?.text} href={button?.id} />
+      ))
+    }
+  </div>
+</header>

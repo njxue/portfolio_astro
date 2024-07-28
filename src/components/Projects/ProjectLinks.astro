@@ -1,0 +1,20 @@
+---
+const { githubLink, productLink } = Astro.props;
+---
+
+<div class="flex flex-row gap-2 items-center">
+  {
+    productLink && (
+      <a href={productLink} target="_blank" rel="noreferrer">
+        <img src="/icons/openInNewWindow.svg" class="w-8" />
+      </a>
+    )
+  }
+  {
+    githubLink && (
+      <a href={githubLink} target="_blank" rel="noreferrer">
+        <img src="/icons/github.svg" class="w-8" />
+      </a>
+    )
+  }
+</div>

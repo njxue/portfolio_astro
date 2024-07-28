@@ -1,0 +1,30 @@
+---
+import Card from "../Card.astro";
+import TechIcons from "../TechIcons";
+
+const { experience } = Astro.props;
+const { role, name, startDate, endDate, deliverables, logo, techs } =
+  experience;
+---
+
+<Card>
+  <Fragment slot="header">
+    <img class="w-20 rounded-full" src={logo} />
+    <div>
+      <p>{role}</p>
+      <p class="text-base text-blue-900 dark:text-teal-500">
+        {name}
+      </p>
+      <p class="text-sm">
+        {startDate} - {endDate}
+      </p>
+    </div>
+  </Fragment>
+  <Fragment slot="body"
+    ><ul class="list-disc list-outside pl-4">
+      {deliverables.map((d, i) => <li class="my-2">{d}</li>)}
+    </ul>
+    <div class="h-[20px]"></div>
+    <div class="bottom-0"><TechIcons techs={techs} client:load /></div>
+  </Fragment>
+</Card>
