@@ -21,4 +21,29 @@ import Coursework from "../components/Coursework/Coursework.astro";
     <Projects />
     <Coursework />
   </div>
+  <div>
+    <img
+      src="/icons/upArrowCircle.svg"
+      class="w-6 fixed right-8 bottom-8 cursor-pointer opacity-50 hover:opacity-100"
+      id="jumpTopButton"
+    />
+  </div>
 </Layout>
+
+<script>
+  const jumpTopBtn = document.getElementById("jumpTopButton");
+
+  jumpTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", () => {
+    // Hide jumpTopButton if already at the top
+    if (window.scrollY === 0) {
+      jumpTopBtn.style.display = "none";
+    } else {
+      console.log(window.scrollY);
+      jumpTopBtn.style.display = "block";
+    }
+  });
+</script>
