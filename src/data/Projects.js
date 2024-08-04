@@ -18,7 +18,7 @@ const {
 const Projects = [
   {
     name: "Photoasis",
-    img: "photoasis.png",
+    img: "photoasis.PNG",
     start: "November 2023",
     end: "Present",
     about: {
