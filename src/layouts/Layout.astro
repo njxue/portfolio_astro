@@ -17,7 +17,90 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen">
+  <body class="min-h-screen" id="app">
     <slot />
   </body>
 </html>
+
+<script>
+  const toggleThemeBtn = document.getElementById("toggleThemeButton");
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const html = document.getElementById("app");
+    const isDarkMode = localStorage.getItem("theme") === "dark";
+    if (isDarkMode) {
+      html.classList.add("dark");
+      toggleThemeBtn.setAttribute("src", "/icons/moon.svg");
+    } else {
+      html.classList.remove("dark");
+      toggleThemeBtn.setAttribute("src", "/icons/sun.svg");
+    }
+
+    const observerCallback = function (entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains("sectionHeader")) {
+            console.log("slide animation");
+            entry.target.classList.add("fadeInAndSlideRightAnimation");
+          } else {
+            entry.target.classList.add("fadeInAndSlideLeftAnimation");
+          }
+          console.log("make visible");
+          entry.target.classList.remove("invisible");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback);
+
+    document.querySelectorAll(".card, .sectionHeader").forEach((elem) => {
+      if (elem) {
+        observer.observe(elem);
+      }
+    });
+  });
+</script>
+
+<style is:global>
+  .fadeInAndSlideUpAnimation {
+    animation: 0.7s ease-out 0s 1 fadeInAndSlideUp;
+  }
+
+  .fadeInAndSlideLeftAnimation {
+    animation: 0.7s ease-out 0s 1 fadeInAndSlideLeft;
+  }
+
+  .fadeInAndSlideRightAnimation {
+    animation: 0.7s ease-out 0s 1 fadeInAndSlideRight;
+  }
+
+  @keyframes fadeInAndSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(+5%);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInAndSlideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(+7%);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInAndSlideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-7%);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>

@@ -4,18 +4,21 @@ import Layout from "../layouts/Layout.astro";
 import Introduction from "../components/Introduction/Introduction.astro";
 import WorkExperiences from "../components/WorkExperiences/WorkExperiences.astro";
 import Projects from "../components/Projects/Projects.astro";
+import Coursework from "../components/Coursework/Coursework.astro";
 ---
 
 <Layout title="Ng Jing Xue">
   <Header />
   <div class="mt-[70px]"><Introduction /></div>
-
   <div
     class="content flex items-center justify-center dark:bg-[#121212] dark:text-white"
   >
   </div>
-  <div class="py-10 px-2 md:px-10 lg:px-40 space-y-7">
+  <div
+    class="flex flex-col gap-10 py-10 px-2 md:px-10 lg:px-40 space-y-7 dark:bg-[#121212] dark:text-[#FAFAFA]"
+  >
     <WorkExperiences />
     <Projects />
+    <Coursework />
   </div>
 </Layout>

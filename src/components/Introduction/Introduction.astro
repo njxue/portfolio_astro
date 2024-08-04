@@ -49,9 +49,25 @@ import Socials from "./Socials.astro";
         >
       </div>
     </div>
-    <img
-      src="/images/me.jpeg"
-      class="object-cover rounded-full h-[250px] w-[250px]"
-    />
+    <img src="/images/me.jpeg" class="object-cover rounded-full" />
   </div>
 </div>
+
+<style>
+  .fadeInAndSlideRightAnimation {
+    animation: 1s ease-out 0s 1 fadeInAndSlideRight;
+  }
+  .fadeInAndSlideLeftAnimation {
+    animation: 1s ease-out 0s 1 fadeInAndSlideLeft;
+  }
+
+  .introText {
+    animation: 1s ease-out 0s 1 fadeInAndSlideRight;
+  }
+
+  img {
+    height: 250px;
+    width: 250px;
+    animation: 1s ease-out 0s 1 fadeInAndSlideLeft !important;
+  }
+</style>
