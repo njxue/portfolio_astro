@@ -1,7 +1,10 @@
 ---
-const { href, text } = Astro.props;
+const { href, text, icon } = Astro.props;
 ---
 
 <a href={`#${href}`}>
-  <button>{text}</button>
+  <div class="flex flex-row gap-1">
+    {icon && <img class="w-5 dark:invert" src={`/icons/${icon}`} />}
+    <p class="hidden sm:block">{text}</p>
+  </div>
 </a>
