@@ -7,7 +7,7 @@ const TechIcons = ({ techs }) => {
     <div class="flex flex-row gap-2 flex-wrap items-center h-[50px]">
       {techs?.map((tech) => (
         <div
-          class="h-full w-8 flex flex-col justify-center items-center gap-1"
+          class="h-full w-8 flex flex-col justify-center items-center gap-2"
           onMouseEnter={() => {
             setHoveredIcon(tech?.name);
           }}
@@ -15,7 +15,10 @@ const TechIcons = ({ techs }) => {
             setHoveredIcon("");
           }}
         >
-          <img class="h-7 grow" src={`/icons/${tech?.icon}`} />
+          <img
+            class="h-7 grow hover:scale-125 transition-all"
+            src={`/icons/${tech?.icon}`}
+          />
           <div
             class={`${
               hoveredIcon == tech?.name ? "visible" : "invisible"

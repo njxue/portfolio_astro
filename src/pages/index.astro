@@ -9,9 +9,11 @@ import Coursework from "../components/Coursework/Coursework.astro";
 
 <Layout title="Ng Jing Xue">
   <Header />
-  <div class="mt-[70px]"><Introduction /></div>
+  <div class="mt-[70px]">
+    <Introduction />
+  </div>
   <div
-    class="flex flex-col gap-10 py-16 px-2 md:px-10 lg:px-40 space-y-7 dark:bg-[#121212] dark:text-[#FAFAFA] overflow-x-hidden"
+    class="flex flex-col gap-10 py-16 px-2 md:px-10 lg:px-40 space-y-7 dark:bg-[#121212] dark:text-[#FAFAFA]"
   >
     <WorkExperiences />
     <Projects />
@@ -30,7 +32,7 @@ import Coursework from "../components/Coursework/Coursework.astro";
   const jumpTopBtn = document.getElementById("jumpTopButton");
 
   jumpTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0 });
   });
 
   window.addEventListener("scroll", () => {

@@ -3,12 +3,12 @@ import P from "../../data/Projects";
 import Project from "./Project.astro";
 ---
 
-<div id="id-projects">
+<div id="id-projects" class="scroll-mt-[90px]">
   <div class="mb-5 text-4xl text-center font-mono sectionHeader invisible">
     <h1>Projects</h1>
   </div>
-  <hr />
-  <div class="mt-5 flex flex-col gap-10">
+  <hr class="border-gray-300 dark:border-gray-600" />
+  <div class="mt-5 flex flex-col gap-10 overflow-x-hidden">
     {P?.map((proj) => <Project project={proj} />)}
   </div>
 </div>
