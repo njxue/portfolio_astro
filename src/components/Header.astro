@@ -15,7 +15,7 @@ const buttons = [
     <h1 class="text-xl">Jing Xue</h1>
     <img class="w-5 cursor-pointer" id="toggleThemeButton" />
   </div>
-  <div class="flex items-center gap-8" id="buttonsContainer">
+  <div class="items-center gap-8 hidden xs:flex" id="buttonsContainer">
     {buttons?.map((button) => <Button text={button?.text} href={button?.id} />)}
   </div>
 </header>
@@ -23,10 +23,8 @@ const buttons = [
 <script>
   const html = document.getElementById("app");
   const toggleThemeBtn = document.getElementById("toggleThemeButton");
-  const buttonsContainer = document.getElementById("buttonsContainer");
 
   toggleThemeBtn?.addEventListener("click", toggleTheme);
-  window.addEventListener("resize", handleWindowResize);
 
   function toggleTheme() {
     const currTheme = localStorage.getItem("theme");
@@ -38,15 +36,6 @@ const buttons = [
       localStorage.setItem("theme", "dark");
       html.classList.add("dark");
       toggleThemeBtn.setAttribute("src", "/icons/moon.svg");
-    }
-  }
-
-  function handleWindowResize() {
-    const width = window.innerWidth;
-    if (width < 480) {
-      buttonsContainer.style.display = "none";
-    } else {
-      buttonsContainer.style.display = "flex";
     }
   }
 </script>
