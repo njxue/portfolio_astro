@@ -11,11 +11,7 @@ import Coursework from "../components/Coursework/Coursework.astro";
   <Header />
   <div class="mt-[70px]"><Introduction /></div>
   <div
-    class="content flex items-center justify-center dark:bg-[#121212] dark:text-white"
-  >
-  </div>
-  <div
-    class="flex flex-col gap-10 py-10 px-2 md:px-10 lg:px-40 space-y-7 dark:bg-[#121212] dark:text-[#FAFAFA] overflow-x-hidden"
+    class="flex flex-col gap-10 py-16 px-2 md:px-10 lg:px-40 space-y-7 dark:bg-[#121212] dark:text-[#FAFAFA] overflow-x-hidden"
   >
     <WorkExperiences />
     <Projects />
@@ -42,7 +38,6 @@ import Coursework from "../components/Coursework/Coursework.astro";
     if (window.scrollY === 0) {
       jumpTopBtn.style.display = "none";
     } else {
-      console.log(window.scrollY);
       jumpTopBtn.style.display = "block";
     }
   });
