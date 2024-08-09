@@ -115,6 +115,23 @@ const modules = [
       },
     ],
   },
+  {
+    term: "Year 4 Semester 1",
+    modules: [
+      {
+        code: "CS3103",
+        title: "Computer Networks Practice",
+      },
+      {
+        code: "CS3219",
+        title: "Software Engineering Principles and Patterns",
+      },
+      {
+        code: "CS4211",
+        title: "Formal Methods for Software Engineering",
+      },
+    ],
+  },
 ];
 
 export default modules;
