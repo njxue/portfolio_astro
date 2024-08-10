@@ -6,14 +6,14 @@ const { githubLink, productLink } = Astro.props;
   {
     productLink && (
       <a href={productLink} target="_blank" rel="noreferrer">
-        <img src="/icons/openInNewWindow.svg" class="w-8" />
+        <img src="/icons/openInNewWindow.svg" class="w-8" alt="project link" />
       </a>
     )
   }
   {
     githubLink && (
       <a href={githubLink} target="_blank" rel="noreferrer">
-        <img src="/icons/github.svg" class="w-8" />
+        <img src="/icons/github.svg" class="w-8" alt="github link" />
       </a>
     )
   }

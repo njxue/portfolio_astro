@@ -6,7 +6,7 @@ import MySocials from "../../data/MySocials";
   {
     Object.values(MySocials)?.map((social) => (
       <a href={social?.link} target="_blank" rel="noreferrer">
-        <img width="30" src={`/icons/${social?.icon}`} />
+        <img width="30" src={`/icons/${social?.icon}`} alt={social?.icon} />
       </a>
     ))
   }

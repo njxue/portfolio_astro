@@ -18,6 +18,7 @@ const TechIcons = ({ techs }) => {
           <img
             class="h-7 grow hover:scale-125 transition-all"
             src={`/icons/${tech?.icon}`}
+            alt={tech?.name}
           />
           <div
             class={`${
