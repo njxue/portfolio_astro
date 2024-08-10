@@ -1,6 +1,7 @@
 ---
 import Card from "../Card.astro";
 import TechIcons from "../TechIcons";
+import { Image } from "astro:assets";
 
 const { experience } = Astro.props;
 const { role, name, startDate, endDate, deliverables, logo, techs } =
@@ -9,7 +10,13 @@ const { role, name, startDate, endDate, deliverables, logo, techs } =
 
 <Card>
   <Fragment slot="header">
-    <img class="w-16 rounded-full" src={logo} alt={`${name}'s logo`} />
+    <Image
+      class="rounded-full"
+      width="64"
+      height="64"
+      src={logo}
+      alt={`${name}'s logo`}
+    />
     <div>
       <p>{role}</p>
       <h3 class="text-base text-blue-900 dark:text-teal-500" aria-label={name}>
