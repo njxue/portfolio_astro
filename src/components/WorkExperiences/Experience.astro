@@ -12,9 +12,9 @@ const { role, name, startDate, endDate, deliverables, logo, techs } =
     <img class="w-16 rounded-full" src={logo} alt={`${name}'s logo`} />
     <div>
       <p>{role}</p>
-      <p class="text-base text-blue-900 dark:text-teal-500">
+      <h3 class="text-base text-blue-900 dark:text-teal-500" aria-label={name}>
         {name}
-      </p>
+      </h3>
       <p class="text-sm">
         {startDate} - {endDate}
       </p>
