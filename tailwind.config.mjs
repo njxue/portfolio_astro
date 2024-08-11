@@ -6,6 +6,12 @@ export default {
       screens: {
         xs: "480px",
       },
+      colors: {
+        snow: "#FFFAFA",
+        slate: {
+          150: "rgb(234, 239, 245)",
+        },
+      },
     },
   },
   plugins: [],

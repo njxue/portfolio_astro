@@ -5,6 +5,7 @@ import Introduction from "../components/Introduction/Introduction.astro";
 import WorkExperiences from "../components/WorkExperiences/WorkExperiences.astro";
 import Projects from "../components/Projects/Projects.astro";
 import Coursework from "../components/Coursework/Coursework.astro";
+import Footer from "../components/Footer/Footer.astro";
 ---
 
 <Layout title="Ng Jing Xue">
@@ -13,12 +14,13 @@ import Coursework from "../components/Coursework/Coursework.astro";
     <Introduction />
   </div>
   <div
-    class="flex flex-col gap-10 py-16 px-2 md:px-10 lg:px-16 xl:px-24 2xl:px-[18rem] space-y-7 dark:bg-[#121212] dark:text-[#FAFAFA]"
+    class="flex flex-col gap-10 py-16 px-2 md:px-10 lg:px-16 xl:px-36 2xl:px-[18rem] space-y-7 bg-[#FFFAFA] dark:bg-[#121212] dark:text-[#FAFAFA]"
   >
     <WorkExperiences />
     <Projects />
     <Coursework />
   </div>
+  <Footer />
   <div>
     <img
       src="/icons/upArrowCircle.svg"
