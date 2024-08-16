@@ -61,7 +61,7 @@ export const TECHS = {
   },
   FIREBASE: {
     name: "Firebase",
-    icon: "firebase.svg",
+    icon: "firebase-new.svg",
   },
   CHAKRAUI: {
     name: "Chakra UI",
