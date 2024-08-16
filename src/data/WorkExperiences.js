@@ -8,7 +8,7 @@ const WorkExperiences = [
     name: "Nas Company",
     role: "Software Engineer Intern",
     startDate: "Jun 2024",
-    endDate: "Present",
+    endDate: "Aug 2024",
     deliverables: [
       "Implemented core frontend features for Nas.io, a community building platform, using Next.js to significantly enhance user experience",
       "Integrated PostHog with Next.js to systematically collect and analyze web performance metrics, including network performance and core web vitals, delivering key insights for improving SEO",
