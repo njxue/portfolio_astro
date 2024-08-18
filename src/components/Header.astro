@@ -1,5 +1,5 @@
 ---
-import Button from "./Button.astro";
+import Button from "./common/Button.astro";
 
 const buttons = [
   { text: "Work", id: "workExperiences", icon: "briefcase.svg" },
@@ -30,20 +30,22 @@ const buttons = [
 </header>
 
 <script>
+  import { Theme, setTheme, getTheme } from "../utils/helpers";
+
   const html = document.getElementById("app");
   const toggleThemeBtn = document.getElementById("toggleThemeButton");
 
   toggleThemeBtn?.addEventListener("click", toggleTheme);
 
   function toggleTheme() {
-    const currTheme = localStorage.getItem("theme");
-    if (currTheme === "dark") {
-      localStorage.setItem("theme", "light");
-      html.classList.remove("dark");
+    const currTheme = getTheme();
+    if (currTheme === Theme.DARK) {
+      setTheme(Theme.LIGHT);
+      html.classList.remove(Theme.DARK);
       toggleThemeBtn.setAttribute("src", "/icons/sun.svg");
     } else {
-      localStorage.setItem("theme", "dark");
-      html.classList.add("dark");
+      setTheme(Theme.DARK);
+      html.classList.add(Theme.DARK);
       toggleThemeBtn.setAttribute("src", "/icons/moon.svg");
     }
   }

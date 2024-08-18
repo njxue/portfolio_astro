@@ -30,16 +30,18 @@ const { title, description } = Astro.props;
 </html>
 
 <script>
+  import { Theme, getTheme } from "../utils/helpers";
+
   const toggleThemeBtn = document.getElementById("toggleThemeButton");
 
   document.addEventListener("DOMContentLoaded", () => {
     const html = document.getElementById("app");
-    const isDarkMode = localStorage.getItem("theme") === "dark";
+    const isDarkMode = getTheme() === Theme.DARK;
     if (isDarkMode) {
-      html.classList.add("dark");
+      html.classList.add(Theme.DARK);
       toggleThemeBtn.setAttribute("src", "/icons/moon.svg");
     } else {
-      html.classList.remove("dark");
+      html.classList.remove(Theme.DARK);
       toggleThemeBtn.setAttribute("src", "/icons/sun.svg");
     }
 
