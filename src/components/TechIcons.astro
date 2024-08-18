@@ -1,0 +1,23 @@
+---
+const { techs } = Astro.props;
+---
+
+{
+  techs && (
+    <div class="flex flex-row gap-2 flex-wrap items-center h-[50px]">
+      {techs.map((tech) => (
+        <div class="techIcon h-full w-8 flex flex-col justify-center items-center gap-2 group">
+          <img
+            class="h-7 grow hover:scale-125 transition-all"
+            src={`/icons/${tech?.icon}`}
+            alt={tech?.name}
+            loading="lazy"
+          />
+          <div class="text-[10px] mt-auto whitespace-nowrap techIcon invisible group-hover:visible">
+            {tech?.name}
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
