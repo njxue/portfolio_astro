@@ -34,7 +34,7 @@ const { name, img, about, techs, githubLink, productLink, logo } = project;
         <div
           class="flex w-full justify-between items-start flex-wrap gap-3 absolute bottom-0"
         >
-          <TechIcons techs={techs} client:load />
+          <TechIcons techs={techs} />
           <div class="flex flex-row gap-2 items-center">
             <ProjectLinks githubLink={githubLink} productLink={productLink} />
           </div>

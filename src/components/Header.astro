@@ -30,7 +30,12 @@ const buttons = [
 </header>
 
 <script>
-  import { Theme, setTheme, getTheme } from "../utils/helpers";
+  import {
+    Theme,
+    setTheme,
+    getTheme,
+    EVENT_TOGGLE_THEME,
+  } from "../utils/helpers";
 
   const html = document.getElementById("app");
   const toggleThemeBtn = document.getElementById("toggleThemeButton");
@@ -39,14 +44,22 @@ const buttons = [
 
   function toggleTheme() {
     const currTheme = getTheme();
+    const newTheme = currTheme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
+
+    // Set new theme
+    setTheme(newTheme);
     if (currTheme === Theme.DARK) {
-      setTheme(Theme.LIGHT);
       html.classList.remove(Theme.DARK);
       toggleThemeBtn.setAttribute("src", "/icons/sun.svg");
     } else {
-      setTheme(Theme.DARK);
       html.classList.add(Theme.DARK);
       toggleThemeBtn.setAttribute("src", "/icons/moon.svg");
     }
+    const customToggleThemeEvent = new CustomEvent(EVENT_TOGGLE_THEME, {
+      detail: { theme: newTheme },
+    });
+
+    // Dispatch event to other listeners (e.g. theme-aware icons)
+    window.dispatchEvent(customToggleThemeEvent);
   }
 </script>

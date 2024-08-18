@@ -3,10 +3,11 @@ export enum Theme {
   DARK = "dark",
 }
 
-const KEY_THEME = "theme";
+const KEY_THEME: string = "theme";
+export const EVENT_TOGGLE_THEME: string = "toggleTheme";
 
 export const getTheme = (): Theme => {
-  const theme = localStorage.getItem(KEY_THEME) || Theme.LIGHT;
+  const theme: String = localStorage.getItem(KEY_THEME) || Theme.LIGHT;
   return theme === Theme.DARK ? Theme.DARK : Theme.LIGHT;
 };
 

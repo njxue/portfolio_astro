@@ -2,22 +2,50 @@
 const { techs } = Astro.props;
 ---
 
-{
-  techs && (
-    <div class="flex flex-row gap-2 flex-wrap items-center h-[50px]">
-      {techs.map((tech) => (
-        <div class="techIcon h-full w-8 flex flex-col justify-center items-center gap-2 group">
-          <img
-            class="h-7 grow hover:scale-125 transition-all"
-            src={`/icons/${tech?.icon}`}
-            alt={tech?.name}
-            loading="lazy"
-          />
-          <div class="text-[10px] mt-auto whitespace-nowrap techIcon invisible group-hover:visible">
-            {tech?.name}
-          </div>
+<div class="flex flex-row gap-2 flex-wrap items-center h-[50px]">
+  {
+    techs?.map((tech) => (
+      <div class="h-full w-8 flex flex-col justify-center items-center gap-2 group">
+        <img
+          class="techIcon h-7 grow hover:scale-125 transition-all"
+          src={`/icons/${tech?.icon}`}
+          data-light={`/icons/${tech?.icon}`}
+          data-dark={tech?.darkIcon && `/icons/${tech.darkIcon}`}
+          alt={tech?.name}
+          loading="lazy"
+        />
+        <div class="text-[10px] mt-auto whitespace-nowrap techIcon invisible group-hover:visible">
+          {tech?.name}
         </div>
-      ))}
-    </div>
-  )
-}
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  import { EVENT_TOGGLE_THEME, getTheme, Theme } from "../../utils/helpers";
+
+  const showThemeAwareIcon = (currTheme: Theme) => {
+    const techIcons = document.querySelectorAll(".techIcon");
+    const isDarkMode = currTheme === Theme.DARK;
+
+    techIcons?.forEach((icon: HTMLElement) => {
+      const lightIcon = icon.dataset?.light;
+      const darkIcon = icon.dataset?.dark;
+
+      if (isDarkMode && darkIcon) {
+        icon.setAttribute("src", darkIcon);
+      } else {
+        icon.setAttribute("src", lightIcon);
+      }
+    });
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    showThemeAwareIcon(getTheme());
+  });
+  window.addEventListener(EVENT_TOGGLE_THEME, (e: CustomEvent) => {
+    const theme: Theme = e.detail?.theme;
+    showThemeAwareIcon(theme);
+  });
+</script>

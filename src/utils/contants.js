@@ -26,10 +26,12 @@ export const TECHS = {
   HTML: {
     name: "HTML",
     icon: "html.svg",
+    darkIcon: "html-dark.svg",
   },
   CSS: {
     name: "CSS",
     icon: "css.svg",
+    darkIcon: "css-dark.svg",
   },
   MYSQL: {
     name: "MySQL",
@@ -50,6 +52,7 @@ export const TECHS = {
   PRISMA: {
     name: "Prisma",
     icon: "prisma.svg",
+    darkIcon: "prisma-dark.svg",
   },
   CSHARP: {
     name: "C#",
