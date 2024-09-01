@@ -10,9 +10,9 @@ const WorkExperiences = [
     startDate: "Jun 2024",
     endDate: "Aug 2024",
     deliverables: [
-      "Implemented core frontend features for Nas.io, a community building platform, using Next.js to significantly enhance user experience",
-      "Integrated PostHog with Next.js to systematically collect and analyze web performance metrics, including network performance and core web vitals, delivering key insights for improving SEO",
-      "Optimised page load time by over 50% by analysing and resolving caching issues with Vercel, and reducing bundle size",
+      "Implemented core frontend features using Next.js, significantly enhancing user experience for over 1.5 million users",
+      "Integrated PostHog with Next.js to collect and analyze critical web performance metrics, including network performance and Core Web Vitals, which delivered key insights for improving SEO",
+      "Optimised page load time by over 50% by diagnosing and resolving page cache misses with Vercel, and reducing bundle size, which significantly enhanced site performance and user satisfaction",
     ],
     techs: [NEXT, TAILWIND, POSTHOG],
     logo: "/images/nasLogo.jfif",
@@ -27,11 +27,8 @@ const WorkExperiences = [
       oleochemicals and green energy.
       `,
     deliverables: [
-      "Automated business processes such as compiling and generating accounting reports, enhancing operational efficiency and minimizing human error",
-      "Streamlined critical business procedures by introducing Quality-of-Life features to the company's business portal in React and C# as well as ad-hoc bug fixes",
-      "Revamped and enhanced the existing codebase through extensive refactoring, resulting in improved performance and code maintainability",
-      "Successfully migrated a vital and complex business procedure from the legacy business portal to the new one, resulting in remarkable performance boosts and significantly reducing manual labor",
-      "Initiated and led the development of detailed code documentation, incorporating UML and sequence diagrams, to facilitate the integration of future developers into the codebase",
+      "Streamlined and automated critical business processes, such as generating accounting reports, through the development of the company’s business portal using React and C#, which enhanced operational efficiency by over 60% and reduced human error",
+      "Initiated and led the development of detailed code documentation, including UML and sequence diagrams using PlantUML, to support the integration of future developers into the codebase",
     ],
     techs: [REACT, CSHARP, JAVASCRIPT, MYSQL, ORACLE_DB],
     logo: "/images/kpnLogo.png",
