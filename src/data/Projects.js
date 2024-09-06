@@ -39,14 +39,11 @@ const Projects = [
     start: "August 2022",
     end: "March 2023",
     about: {
-      motivation: `
+      description: `
         Todo lists serve as a reminder to the users the tasks that they have to complete. 
         However, users have to remember to add these tasks into the list of todos in the first place. 
         If they have forgotten to do so, these tasks will not appear in the todo list, 
         and they may end up forgetting about these tasks altogether.
-      `,
-
-      description: `
         Odo.t is an online todo-list where todos can be automatically added at every fixed interval (e.g. every day, every week). 
         Users only have to set the interval once, and the todo list becomes automated! 
         Odo.t also features a set of basic todo list functionalities such as sorting the tasks, grouping tasks together and marking certain tasks as important.
