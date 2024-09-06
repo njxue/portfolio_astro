@@ -6,7 +6,8 @@ import { Image } from "astro:assets";
 import ImageCarousel from "./ImageCarousel";
 
 const { project } = Astro.props;
-const { name, images, about, techs, githubLink, productLink, logo } = project;
+const { name, images, description, techs, githubLink, productLink, logo } =
+  project;
 ---
 
 <Card>
@@ -46,7 +47,11 @@ const { name, images, about, techs, githubLink, productLink, logo } = project;
         </div>
 
         {/* Project description */}
-        <div class="my-5 text-base">{about?.description}</div>
+        {
+          description && (
+            <div class="my-5 text-base text-justify">{description}</div>
+          )
+        }
       </div>
 
       {/* Project tech stack */}
