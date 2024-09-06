@@ -40,7 +40,11 @@ const Projects = [
   },
   {
     name: "Odo.t",
-    images: ["odot.png"],
+    images: [
+      "odot/odot-home.PNG",
+      "odot/odot-important.PNG",
+      "odot/odot-configure.PNG",
+    ],
     start: "August 2022",
     end: "March 2023",
     about: {
@@ -62,7 +66,12 @@ const Projects = [
   },
   {
     name: "Frenergy",
-    images: ["frenergy.png"],
+    images: [
+      "frenergy/frenergy-home.PNG",
+      "frenergy/frenergy-forum.PNG",
+      "frenergy/frenergy-profile.PNG",
+      "frenergy/frenergy-invites.PNG",
+    ],
     start: "May 2022",
     end: "August 2022",
     about: {
