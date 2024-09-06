@@ -20,7 +20,6 @@ const ImageCarousel = ({ images, projectName }) => {
           height="500"
           src={`/images/${image}`}
           alt={`${projectName}'s screenshot`}
-          onClick={}
         />
       ))}
     </Carousel>
