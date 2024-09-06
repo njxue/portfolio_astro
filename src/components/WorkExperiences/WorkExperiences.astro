@@ -9,6 +9,15 @@ import Experience from "./Experience.astro";
   </div>
   <hr class="border-gray-300 dark:border-gray-600" />
   <div class="mt-5 flex flex-col gap-10 overflow-x-hidden">
-    {WE?.map((exp) => <Experience experience={exp} />)}
+    {
+      WE?.map((exp, i) => (
+        <>
+          <Experience experience={exp} />
+          {i < WE.length - 1 && (
+            <hr class="border-gray-300 dark:border-gray-700 mt-3" />
+          )}
+        </>
+      ))
+    }
   </div>
 </div>
