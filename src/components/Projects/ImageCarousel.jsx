@@ -8,6 +8,7 @@ const ImageCarousel = ({ images, projectName }) => {
       showThumbs={false}
       showArrows={numImages > 1}
       showIndicators={numImages > 1}
+      showStatus={false}
       autoPlay
       infiniteLoop
       stopOnHover
