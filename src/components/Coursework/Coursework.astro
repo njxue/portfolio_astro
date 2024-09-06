@@ -3,8 +3,9 @@ import CoursesWork from "../../data/MyModules";
 ---
 
 <div id="courseWork" class="scroll-mt-[90px]">
-  <div class="mb-5 text-4xl text-center font-mono sectionHeader invisible">
-    <h2 aria-label="coursework">Coursework</h2>
+  <div class="mb-5 text-center font-mono sectionHeader invisible">
+    <p>(Relevant)</p>
+    <h2 aria-label="coursework" class="text-4xl">Coursework</h2>
   </div>
   <hr class="border-gray-300 dark:border-gray-600" />
   <table class="mt-5 w-full text-center table-auto">
@@ -19,11 +20,13 @@ import CoursesWork from "../../data/MyModules";
       CoursesWork?.map((semester) => (
         <tbody>
           <tr class="bg-slate-200 font-bold dark:bg-[#3d3d3d]">
-            <td colspan="3">{semester?.term}</td>
+            <td colspan="3" class="py-1">
+              {semester?.term}
+            </td>
           </tr>
           {semester?.modules?.map((course) => (
             <tr>
-              <td>{course?.code}</td>
+              <td class="py-1">{course?.code}</td>
               <td>{course?.title}</td>
               {course?.notes && (
                 <td class="flex justify-center">

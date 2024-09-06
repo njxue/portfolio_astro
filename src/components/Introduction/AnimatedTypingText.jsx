@@ -11,7 +11,7 @@ const AnimatedTypingText = () => {
       wrapper="span"
       speed={60}
       style={{
-        fontSize: "6vh",
+        fontSize: "5vh",
         display: "inline-block",
         fontWeight: "bold",
         whiteSpace: "pre-line",
