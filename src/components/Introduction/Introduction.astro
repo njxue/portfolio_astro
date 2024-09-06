@@ -1,25 +1,24 @@
 ---
+import AnimatedTypingText from "./AnimatedTypingText";
 import ResumeLink from "./ResumeLink.astro";
 import Socials from "./Socials.astro";
 ---
 
-<div
-  class="py-[50px] border-solid bg-slate-150 font-mono dark:bg-[#b3b3b3] dark:text-black"
->
+<div class="py-[50px] bg-slate-150 font-mono dark:bg-[#b3b3b3]">
   <div
     class="px-10 max-w-[1000px] m-auto flex justify-center flex-wrap-reverse gap-7 items-center"
   >
     <div class="introText basis-1/2 grow">
       <div>
-        <p class="text-4xl font-bold">
-          Hi there! <span>&#128075</span> I'm Jing Xue,
-        </p>
-        <p class="text-2xl mt-3">
+        <AnimatedTypingText client:load />
+
+        <p class="text-2xl mt-6">
           A <b>Final Year Computer Science</b> undergraduate from the <b
             >National University of Singapore</b
           >
         </p>
-        <p class="text-xl mt-10">
+
+        <p class="text-xl mt-4">
           I'm an aspiring software developer who loves coding, coffee and
           corgis!
         </p>
@@ -31,7 +30,7 @@ import Socials from "./Socials.astro";
     </div>
     <img
       src="/images/me.jpeg"
-      class="object-cover rounded-full"
+      class="object-cover rounded-full w-[250px] aspect-square"
       alt="profile"
     />
   </div>
@@ -50,8 +49,6 @@ import Socials from "./Socials.astro";
   }
 
   img {
-    height: 250px;
-    width: 250px;
     animation: 1s ease-out 0s 1 fadeInAndSlideLeft !important;
   }
 </style>
