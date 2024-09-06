@@ -18,7 +18,12 @@ const {
 const Projects = [
   {
     name: "Photoasis",
-    img: "photoasis.PNG",
+    images: [
+      "photoasis/albums.PNG",
+      "photoasis/album.PNG",
+      "photoasis/create-new-album.PNG",
+      "photoasis/expanded-photo.PNG",
+    ],
     start: "November 2023",
     end: "Present",
     about: {
@@ -35,7 +40,7 @@ const Projects = [
   },
   {
     name: "Odo.t",
-    img: "odot.png",
+    images: ["odot.png"],
     start: "August 2022",
     end: "March 2023",
     about: {
@@ -57,7 +62,7 @@ const Projects = [
   },
   {
     name: "Frenergy",
-    img: "frenergy.png",
+    images: ["frenergy.png"],
     start: "May 2022",
     end: "August 2022",
     about: {
@@ -73,7 +78,7 @@ const Projects = [
   },
   {
     name: "TA-Assist",
-    img: "ta-assist.png",
+    images: ["ta-assist.png"],
     start: "September 2022",
     end: "November 2022",
     about: {
