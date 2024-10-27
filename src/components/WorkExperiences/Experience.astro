@@ -27,12 +27,11 @@ const { role, name, startDate, endDate, deliverables, logo, techs } =
       </p>
     </div>
   </div>
-  <hr class="dark:border-[#3d3d3d] mt-5" />
-  <div>
-    <ul class="list-disc list-outside pl-4">
-      {deliverables.map((d) => <li class="my-2">{d}</li>)}
-    </ul>
-    <div class="h-[20px]"></div>
-    <div class="bottom-0"><TechIcons techs={techs} /></div>
-  </div>
+  <hr class="dark:border-[#3d3d3d] my-3" />
+
+  <ul class="list-disc list-outside pl-4">
+    {deliverables.map((d) => <li class="my-2">{d}</li>)}
+  </ul>
+  <div class="h-[20px]"></div>
+  <div class="bottom-0"><TechIcons techs={techs} /></div>
 </Card>
