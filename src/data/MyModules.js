@@ -121,6 +121,7 @@ const modules = [
       {
         code: "CS3103",
         title: "Computer Networks Practice",
+        notes: "https://github.com/njxue/Notes/blob/main/CS3103_Cheatsheet.pdf",
       },
       {
         code: "CS3219",
