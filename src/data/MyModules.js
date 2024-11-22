@@ -126,10 +126,12 @@ const modules = [
       {
         code: "CS3219",
         title: "Software Engineering Principles and Patterns",
+        notes: "https://github.com/njxue/Notes/blob/main/CS3219_Cheatsheet.pdf",
       },
       {
         code: "CS4211",
         title: "Formal Methods for Software Engineering",
+        notes: "https://github.com/njxue/Notes/blob/main/CS4211_Cheatsheet.pdf",
       },
     ],
   },
