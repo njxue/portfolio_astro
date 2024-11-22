@@ -14,8 +14,29 @@ const {
   FIREBASE,
   CHAKRAUI,
   JAVA,
+  EXPRESS,
+  REDIS,
+  KAFKA,
+  DOCKER,
+  MONGO,
 } = TECHS;
 const Projects = [
+  {
+    name: "PeerPrep",
+    description: `
+    PeerPrep is a technical interview preparation platform and peer matching system, where users can find peers to practice whiteboard-style interview questions together.
+    This project is part of CS3219, a software engineering module from NUS, and is built using event-driven microservice architecture.
+  `,
+    techs: [REACT, EXPRESS, CSS, REDIS, KAFKA, DOCKER, MONGO],
+    githubLink:
+      "https://github.com/CS3219-AY2425S1/cs3219-ay2425s1-project-g25",
+    images: [
+      "peerprep/dashboard.PNG",
+      "peerprep/room.PNG",
+      "peerprep/questions.PNG",
+    ],
+    logo: "peerprepLogo.png",
+  },
   {
     name: "Photoasis",
     images: [

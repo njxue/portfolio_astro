@@ -70,4 +70,26 @@ export const TECHS = {
     name: "Chakra UI",
     icon: "chakraui.svg",
   },
+  EXPRESS: {
+    name: "Express",
+    icon: "express.svg",
+    darkIcon: "express-dark.svg",
+  },
+  DOCKER: {
+    name: "Docker",
+    icon: "docker.svg",
+  },
+  REDIS: {
+    name: "Redis",
+    icon: "redis.svg",
+  },
+  KAFKA: {
+    name: "Kafka",
+    icon: "kafka.svg",
+    darkIcon: "kafka-dark.svg",
+  },
+  MONGO: {
+    name: "MongoDB",
+    icon: "mongo.svg",
+  },
 };

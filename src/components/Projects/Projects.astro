@@ -1,5 +1,5 @@
 ---
-import P from "../../data/Projects";
+import projects from "../../data/Projects";
 import Project from "./Project.astro";
 ---
 
@@ -10,10 +10,10 @@ import Project from "./Project.astro";
   <hr class="border-gray-300 dark:border-gray-600" />
   <div class="mt-5 flex flex-col gap-2 overflow-x-hidden">
     {
-      P?.map((proj, i) => (
+      projects?.map((proj, i) => (
         <>
           <Project project={proj} />
-          {i < P.length - 1 && (
+          {i < projects.length - 1 && (
             <hr class="border-gray-300 dark:border-gray-700 mt-3" />
           )}
         </>
