@@ -135,6 +135,15 @@ const modules = [
       },
     ],
   },
+  {
+    term: "Year 4 Semester 2",
+    modules: [
+      {
+        code: "CS4218",
+        title: "Software Testing",
+      },
+    ],
+  },
 ];
 
 export default modules;
