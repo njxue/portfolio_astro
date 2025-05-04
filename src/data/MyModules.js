@@ -141,6 +141,7 @@ const modules = [
       {
         code: "CS4218",
         title: "Software Testing",
+        notes: "https://github.com/njxue/Notes/blob/main/CS4218_Cheatsheet.pdf",
       },
     ],
   },
