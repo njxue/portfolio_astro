@@ -19,6 +19,8 @@ const {
   KAFKA,
   DOCKER,
   MONGO,
+  CLOUDFLARE,
+  CLOUDINARY,
 } = TECHS;
 const Projects = [
   {
@@ -52,7 +54,7 @@ const Projects = [
         Photography is my hobby, and analyzing and comparing my photos with their camera settings has enabled me to improve my skills in properly exposing photos 
         and capturing better shots. Hence, I designed Photoasis as a platform to document my growth in photography as well as a place to archive my most precious moments in life.
       `,
-    techs: [NEXT, TAILWIND, POSTGRESQL, PRISMA, BACKBLAZE],
+    techs: [NEXT, TAILWIND, PRISMA, BACKBLAZE, CLOUDFLARE, CLOUDINARY],
     githubLink: "https://github.com/njxue/photoasis",
     productLink: "https://photoasis.vercel.app",
     logo: "photoasisLogo.png",

@@ -92,4 +92,12 @@ export const TECHS = {
     name: "MongoDB",
     icon: "mongo.svg",
   },
+  CLOUDFLARE: {
+    name: "Cloudflare Workers",
+    icon: "cloudflare-workers.svg",
+  },
+  CLOUDINARY: {
+    name: "Cloudinary",
+    icon: "cloudinary.svg",
+  },
 };
