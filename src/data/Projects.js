@@ -42,10 +42,11 @@ const Projects = [
   {
     name: "Photoasis",
     images: [
-      "photoasis/albums.PNG",
-      "photoasis/album.PNG",
-      "photoasis/create-new-album.PNG",
-      "photoasis/expanded-photo.PNG",
+      "photoasis/Landing.JPG",
+      "photoasis/Dashboard.JPG",
+      "photoasis/AlbumPage.JPG",
+      "photoasis/ExpandedPhoto.JPG",
+      "photoasis/CreateAlbum.JPG",
     ],
     start: "November 2023",
     end: "Present",
