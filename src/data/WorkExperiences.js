@@ -5,6 +5,15 @@ const { NEXT, REACT, TAILWIND, MYSQL, JAVASCRIPT, ORACLE_DB, CSHARP, POSTHOG } =
 
 const WorkExperiences = [
   {
+    name: "Shopee",
+    role: "Web Frontend Developer",
+    startDate: "Aug 2025",
+    endDate: "current",
+    deliverables: [],
+    techs: [],
+    logo: "/images/shopeeLogo.png",
+  },
+  {
     name: "Nas Company",
     role: "Software Engineer Intern",
     startDate: "Jun 2024",
