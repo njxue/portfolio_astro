@@ -44,7 +44,7 @@ const Projects = [
     images: [
       "photoasis/Landing.JPG",
       "photoasis/Dashboard.JPG",
-      "photoasis/AlbumPage.JPG",
+      "photoasis/Album.JPG",
       "photoasis/ExpandedPhoto.JPG",
       "photoasis/CreateAlbum.JPG",
     ],
